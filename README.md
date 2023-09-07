@@ -3,7 +3,14 @@ Generates random locally administered unicast MAC address, along with a name you
 
 # Use case (Under development)
 ```hcl
-// Provider block coming soon...
+terraform {
+  required_providers {
+    macaddress = {
+      source = "cgleesonpavlovmedia/macaddress"
+      version = "1.0.0"
+    }
+  }
+}
 
 resource "macaddress" "addr_001" {
         name = "foo"

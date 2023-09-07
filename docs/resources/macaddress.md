@@ -5,6 +5,15 @@ Generates random locally administered unicast MAC address or MAC address with sp
 ## Example Usage
 
 ```hcl
+terraform {
+  required_providers {
+    macaddress = {
+      source = "cgleesonpavlovmedia/macaddress"
+      version = "1.0.0"
+    }
+  }
+}
+
 resource "macaddress" "example_local_address" {
     name = "foo" // optional
 }
