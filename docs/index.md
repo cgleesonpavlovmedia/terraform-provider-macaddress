@@ -5,14 +5,14 @@ Generates MAC addresses
 ## Example Usage
 
 ```hcl
-resource "macaddress" "example_address" {
+resource "macaddress" "addr_001" {
+        name = "foo" // optional
 }
 
-// Terraform Mikrotik Provider:
-// https://github.com/ddelnano/terraform-provider-mikrotik
-resource "mikrotik_dhcp_lease" "example_lease" {
-  address    = "10.0.0.10"
-  macaddress = upper(macaddress.example_address.address)
-  comment    = "Example DHCP Lease"
+output "generated_mac_addr_001" {
+  value = macaddress.addr_001.address
+}
+output "generated_mac_addr_001_name" {
+  value = macaddress.addr_001.name
 }
 ```

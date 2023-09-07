@@ -6,6 +6,7 @@ Generates random locally administered unicast MAC address or MAC address with sp
 
 ```hcl
 resource "macaddress" "example_local_address" {
+    name = "foo" // optional
 }
 
 resource "macaddress" "example_prefix_address" {
@@ -21,6 +22,7 @@ resource "macaddress" "example_prefix_address" {
 ## Attribute Reference
 
 * `address` - Generated macaddress
+* `name` - Optinally supplied name of the mac address, can be an interface name for example.
 
 ## Import
 
