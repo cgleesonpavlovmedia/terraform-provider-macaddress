@@ -1,7 +1,7 @@
 # terraform-provider-macaddress
 Generates random locally administered unicast MAC address
 
-# Use case
+# Use case (Under development, the code below is not corrrect for this repo)
 ```hcl
 terraform {
   required_providers {
