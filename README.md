@@ -1,5 +1,5 @@
 # terraform-provider-macaddress
-Generates random locally administered unicast MAC address
+Generates random locally administered unicast MAC address, along with a name you set, so you can match pairs of macaddr/name.
 
 # Use case (Under development)
 ```hcl
