@@ -22,15 +22,17 @@ func resourceAddress() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"id": {
 				Computed: true,
-				Type:     cty.String,
+				Type:     schema.TypeString,
 			},
-			"value": {
-				Computed: true,
-				Type:     cty.String,
+			"name": {
+				Optional: true,
+				ForceNew: true,
+				Computed: false,
+				Type:     schema.TypeString,
 			},
 			"address": {
 				Computed: true,
-				Type:     cty.String
+				Type:     schema.TypeString,
 			},
 			"prefix": {
 				Type: schema.TypeList,
@@ -99,7 +101,6 @@ func resourceAddressCreate(ctx context.Context, d *schema.ResourceData, m interf
 
 	d.SetId(address)
 	d.Set("address", address)
-	d.Set("value", address)
 
 	return nil
 }

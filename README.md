@@ -13,6 +13,7 @@ terraform {
 }
 
 resource "macaddress" "example_address" {
+        name = "interface1"
 }
 
 // Terraform Mikrotik Provider - https://github.com/ddelnano/terraform-provider-mikrotik
